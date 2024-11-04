@@ -6,6 +6,7 @@
         {
             const int FI = 0;
             int num, sumatori, contador;
+            double mitjana;
 
             contador = 0;
             sumatori = 0;
@@ -15,9 +16,19 @@
             {
                 contador = contador + 1;
                 sumatori = sumatori + num;
-                num = Convert.ToInt32(Console.ReadLine());
+                num = Convert.ToInt32(Console.ReadLine());  
+            }    
+
+            if (contador == 0)
+                Console.WriteLine("No s'ha entrat cap valor");
+
+            else
+            {
+                mitjana = 1.00 * sumatori / contador;
+                Console.WriteLine($"Mitjana: {mitjana}");
             }
-            Console.WriteLine($"Mitjana: {sumatori / contador}");
+
+           
         }
     }
 }
