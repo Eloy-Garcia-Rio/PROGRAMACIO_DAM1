@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que, mentres el valor entrat per l'usuari no sigui 0, porta un recompte dels valors positius i negatius entrats.
+        /// A l'acabar l'itinerari retorna la quantitat de valors positius i negatius entrats.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             const int FI = 0;

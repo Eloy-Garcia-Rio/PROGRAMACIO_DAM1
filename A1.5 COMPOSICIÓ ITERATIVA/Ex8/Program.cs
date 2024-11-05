@@ -1,22 +1,25 @@
-﻿namespace Ex7
+﻿namespace Ex8
 {
     internal class Program
     {
         /// <summary>
-        /// Programa que, mentres el valor entrat per l'usuari no sigui 0, emmagatzema el valor entrat més gran i el més petit.
+        /// Programa que, mentres la línia llegida no sigui buida, emmagatzema el valor entrat més gran i el més petit.
         /// A l'acabar l'itinerari retorna els valors màxim i mínim entrats.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            const int FI = 0;
             int num, max, min;
+            string linia;
+            StreamReader sr;
 
             max = int.MinValue;
             min = int.MaxValue;
-            num = Convert.ToInt32(Console.ReadLine());
+            sr = new StreamReader("NUMEROS.TXT");
+            linia = sr.ReadLine();
+            num = Convert.ToInt32(linia);
 
-            while (num != FI)
+            while (linia != null)
             {
                 if (max < num)
                     max = num;
@@ -24,8 +27,10 @@
                 if (min > num)
                     min = num;
 
-                num = Convert.ToInt32(Console.ReadLine());
+                linia = sr.ReadLine();
+                num = Convert.ToInt32(linia);
             }
+            sr.Close();
             Console.WriteLine($"Número més gran: {max}\nNúmero més petit: {min}");
         }
     }

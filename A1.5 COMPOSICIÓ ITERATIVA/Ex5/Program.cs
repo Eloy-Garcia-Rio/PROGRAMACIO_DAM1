@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que, mentres el valor entrat per l'usuari no sigui 0, porta un recompte i fa un sumatori dels valors entrats.
+        /// A l'acabar l'itinerari retorna la mitjana de tots els valors.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             const int FI = 0;
@@ -27,8 +32,6 @@
                 mitjana = 1.00 * sumatori / contador;
                 Console.WriteLine($"Mitjana: {mitjana}");
             }
-
-           
         }
     }
 }
