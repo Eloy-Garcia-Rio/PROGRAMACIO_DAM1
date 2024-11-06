@@ -2,6 +2,12 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que, mentres la línia llegida del fitxer no sigui buida, determina si una coordenada (x,y) es troba dins, fora o sobre una circumferència de radi determinat
+        /// per l'usuari. Els valors trobats a les línies senars corresponen a X, mentres que les línies parelles corresponen a Y.
+        /// Durant l'itinerari, el programa retorna el missatge corresponent a cada cas.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             double valorX, valorY, radi, resultat;

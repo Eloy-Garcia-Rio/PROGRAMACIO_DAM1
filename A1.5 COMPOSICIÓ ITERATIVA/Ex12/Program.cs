@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que, fmentres la línia llegida del fitxer no sigui buida, porta un recompte de tots els alumnes anomenats Iker o Alex.
+        /// Al final de l'itinerari, el programa retorna quants alumes es diuen Alex i quants Iker.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int contadorIker, contadorAlex;

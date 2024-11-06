@@ -3,7 +3,7 @@
     internal class Program
     {
         /// <summary>
-        /// Programa que, mentres la línia llegida no sigui buida, porta un recompte dels valors trobats en un fitxer i fa mitjana dels valors.
+        /// Programa que, mentres la línia llegida del fitxer no sigui buida, porta un recompte dels valors trobats en un fitxer i fa mitjana dels valors.
         /// A l'acabar l'itinerari retorna la mitjana de tots els valors.
         /// </summary>
         /// <param name="args"></param>

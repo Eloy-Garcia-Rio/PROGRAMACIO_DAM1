@@ -2,6 +2,12 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que, mentres la línia llegida del fitxer no sigui -1, calcula els resultats dels partits per determinar els punts obtinguts, assignant els valors de les línies senars
+        /// al Girona i les línies parelles a l'equip contrari.
+        /// Al final de l'itinerari, el programa retorna el total de punts obtinguts durant la lliga.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int totalPunts, golsGir, golsRival;

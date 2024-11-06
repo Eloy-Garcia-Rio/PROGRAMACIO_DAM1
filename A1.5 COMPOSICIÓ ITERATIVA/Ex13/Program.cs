@@ -2,6 +2,13 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que, mentres la línia llegida del fitxer no sigui buida, porta un recompte de la quantitat de billets premiats, la quantitat de billets no premiats,
+        /// aleatoritza el premi corresponent i recompta l'import total dels premis.
+        /// Al finalitzar l'itinerari, el programa retorna el total de billets, el total de billets guanyadors, el percentatge de billets guanyadors
+        /// i l'import total dels premis.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int contadorBonus, contadorNoBonus, totalBillets, totalPremis;

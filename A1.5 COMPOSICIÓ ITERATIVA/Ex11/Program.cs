@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que, fins que l'usuari no encerti tots els resultats, fa 4 operacions bàsiques amb 2 números aleatoris entre 1 i 100.
+        /// Al finalitzar l'itinerari, el programa retorna la quantitat d'intents emprats.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int operand1, operand2, contador;

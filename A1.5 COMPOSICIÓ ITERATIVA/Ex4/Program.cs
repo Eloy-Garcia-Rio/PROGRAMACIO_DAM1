@@ -3,7 +3,7 @@
     internal class Program
     {
         /// <summary>
-        /// Programa que, mentres la línia llegida no sigui buida, porta un recompte dels valors positius i negatius trobats en un fitxer.
+        /// Programa que, mentres la línia llegida del fitxer no sigui buida, porta un recompte dels valors positius i negatius trobats en un fitxer.
         /// A l'acabar l'itinerari retorna la quantitat de valors positius i negatius trobats.
         /// </summary>
         /// <param name="args"></param>

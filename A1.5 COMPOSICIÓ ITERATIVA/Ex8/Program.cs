@@ -3,7 +3,7 @@
     internal class Program
     {
         /// <summary>
-        /// Programa que, mentres la línia llegida no sigui buida, emmagatzema el valor entrat més gran i el més petit.
+        /// Programa que, mentres la línia llegida del fitxer no sigui buida, emmagatzema el valor entrat més gran i el més petit.
         /// A l'acabar l'itinerari retorna els valors màxim i mínim entrats.
         /// </summary>
         /// <param name="args"></param>
