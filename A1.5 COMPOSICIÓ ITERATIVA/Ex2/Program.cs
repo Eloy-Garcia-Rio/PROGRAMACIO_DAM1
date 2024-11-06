@@ -11,11 +11,14 @@
         {
             int contador;
             string linia;
+            bool esBuit;
             StreamReader sr;
 
             contador = 0;
+
             sr = new StreamReader("NUMEROS.TXT");
             linia = sr.ReadLine();
+            esBuit = linia == null;
 
             while (linia != null)
             {
@@ -23,8 +26,18 @@
                 Console.WriteLine($"Iteració {contador} --> {linia}");
                 linia = sr.ReadLine();
             }
+
             sr.Close();
-            Console.WriteLine($"TOTAL MISSATGES: {contador}");
+
+            if (esBuit)
+            {
+                Console.WriteLine("El fitxer és buit.");
+            }
+            else
+            {
+                Console.WriteLine($"TOTAL MISSATGES: {contador}");
+            }
+
         }
     }
 }

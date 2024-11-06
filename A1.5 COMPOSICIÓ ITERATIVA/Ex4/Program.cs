@@ -11,31 +11,47 @@
         {
             int num, contadorPos, contadorNeg;
             string linia;
+            bool esBuit;
             StreamReader sr;
 
             contadorPos = 0;
             contadorNeg = 0;
+
             sr = new StreamReader("NUMEROS.TXT");
             linia = sr.ReadLine();
-            num = Convert.ToInt32(linia);
+            esBuit = linia == null;
 
             while (linia != null)
             {
+                num = Convert.ToInt32(linia);
+
                 if (num > 0)
                 {
-                    contadorPos = contadorPos + 1;
+                    contadorPos++;
                     linia = sr.ReadLine();
-                    num = Convert.ToInt32(linia);
+                }
+                else if (num < 0)
+                {
+                    contadorNeg++;
+                    linia = sr.ReadLine();
                 }
                 else
                 {
-                    contadorNeg = contadorNeg + 1;
                     linia = sr.ReadLine();
-                    num = Convert.ToInt32(linia);
                 }
             }
+
             sr.Close();
-            Console.WriteLine($"TOTAL POSITIUS: {contadorPos}\nTOTAL NEGATIUS: {contadorNeg}");
+
+            if (esBuit)
+            {
+                Console.WriteLine("El fitxer és buit.");
+            }
+            else
+            {
+                Console.WriteLine($"TOTAL POSITIUS: {contadorPos}\nTOTAL NEGATIUS: {contadorNeg}");
+            }
+
         }
     }
 }

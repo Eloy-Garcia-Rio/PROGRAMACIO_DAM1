@@ -11,16 +11,20 @@
         {
             int num, max, min;
             string linia;
+            bool esBuit;
             StreamReader sr;
 
             max = int.MinValue;
             min = int.MaxValue;
+
             sr = new StreamReader("NUMEROS.TXT");
             linia = sr.ReadLine();
-            num = Convert.ToInt32(linia);
+            esBuit = linia == null;
 
             while (linia != null)
             {
+                num = Convert.ToInt32(linia);
+
                 if (max < num)
                     max = num;
 
@@ -28,10 +32,17 @@
                     min = num;
 
                 linia = sr.ReadLine();
-                num = Convert.ToInt32(linia);
             }
             sr.Close();
-            Console.WriteLine($"Número més gran: {max}\nNúmero més petit: {min}");
+
+            if (esBuit)
+            {
+                Console.WriteLine("El fitxer és buit.");
+            }
+            else
+            {
+                Console.WriteLine($"Número més gran: {max}\nNúmero més petit: {min}");
+            }
         }
     }
 }

@@ -12,25 +12,36 @@
             int num, sumatori, contador;
             double mitjana;
             string linia;
+            bool esBuit;
             StreamReader sr;
 
             contador = 0;
             sumatori = 0;
+
             sr = new StreamReader("NUMEROS2.TXT");
             linia = sr.ReadLine();
-            num = Convert.ToInt32(linia);
+            esBuit = linia == null;
 
             while (linia != null)
             {
-                contador = contador + 1;
+                num = Convert.ToInt32(linia);
+                contador++;
                 sumatori = sumatori + num;
                 linia = sr.ReadLine();
-                num = Convert.ToInt32(linia);
             }
 
             sr.Close();
-            mitjana = 1.00 * sumatori / contador;
-            Console.WriteLine($"Mitjana: {mitjana}");
+
+            if (esBuit)
+            {
+                Console.WriteLine("El fitxer és buit.");
+            }
+            else
+            {
+                mitjana = 1.00 * sumatori / contador;
+                Console.WriteLine($"Mitjana: {mitjana}");
+            }
+
         }
     }
 }
