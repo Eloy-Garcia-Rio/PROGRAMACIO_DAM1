@@ -24,13 +24,13 @@
             producteReal = operand1 * operand2;
             divisoReal = operand1 / operand2;
 
-            Console.WriteLine("Resultat de la suma?");
+            Console.WriteLine($"Resultat de la suma {operand1}+{operand2}?");
             sumaUsuari = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Resultat de la resta?");
+            Console.WriteLine($"Resultat de la resta {operand1}-{operand2}?");
             restaUsuari = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Resultat de la multiplicació?");
+            Console.WriteLine($"Resultat de la multiplicació {operand1}*{operand2}?");
             producteUsuari = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Resultat de la divisió?");
+            Console.WriteLine($"Resultat de la divisió {operand1}/{operand2}?");
             divisioUsuari = Convert.ToInt32(Console.ReadLine());
 
             while (sumaUsuari != sumaReal || restaUsuari != restaReal || producteUsuari != producteReal || divisioUsuari != divisoReal)
