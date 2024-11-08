@@ -1,2 +1,2 @@
-# A1.5.-COMPOSICIO-ITERATIVA
+# PROGRAMACIO_DAM1
 Repositori personal per a les activitats del mòdul de programació.
