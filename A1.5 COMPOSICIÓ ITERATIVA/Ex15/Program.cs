@@ -5,60 +5,59 @@
         /// <summary>
         /// Programa que, mentres la línia llegida del fitxer no sigui -1, calcula els resultats dels partits per determinar els punts obtinguts, assignant els valors de les línies senars
         /// al Girona i les línies parelles a l'equip contrari.
-        /// Al final de l'itinerari, el programa retorna el total de punts obtinguts durant la lliga.
+        /// Al final de l'itinerari, el programa retorna el total de punts obtinguts durant la lliga i la quantitat de partits guanyats, empatats i perduts.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
             int totalPunts, golsGir, golsRival;
-            string liniaGir, liniaRival;
-            bool esBuit;
+            int partitsGuanyats, partitsPerduts, partitsEmpatats;
             StreamReader sr;
 
             totalPunts = 0;
             golsGir = 0;
             golsRival = 0;
+            partitsEmpatats = 0;
+            partitsGuanyats = 0;
+            partitsPerduts = 0;
 
             sr = new StreamReader("Girona lliga23_24.txt");
-            liniaGir = sr.ReadLine();
-            liniaRival = sr.ReadLine();
-            esBuit = liniaGir == null;
+            golsGir = Convert.ToInt32(sr.ReadLine());
+            golsRival = Convert.ToInt32(sr.ReadLine());
 
-            while (liniaGir != "-1")
+            while (golsGir != -1)
             {
-                golsGir = Convert.ToInt32(liniaGir);
-                golsRival = Convert.ToInt32(liniaRival);
 
                 if (golsGir > golsRival)
                 {
                     totalPunts = totalPunts + 3;
-                    liniaGir = sr.ReadLine();
-                    liniaRival = sr.ReadLine();
+                    partitsGuanyats++;
                 }
                 else if (golsGir == golsRival)
                 {
                     totalPunts = totalPunts + 1;
-                    liniaGir = sr.ReadLine();
-                    liniaRival = sr.ReadLine();
+                    partitsEmpatats++;
                 }
                 else
                 {
-                    liniaGir = sr.ReadLine();
-                    liniaRival = sr.ReadLine();
+                    partitsPerduts++;
                 }
+
+                golsGir = Convert.ToInt32(sr.ReadLine());
+                golsRival = Convert.ToInt32(sr.ReadLine());
             }
 
             sr.Close();
 
-            if (esBuit)
+            if (totalPunts == 0 && partitsGuanyats == 0 && partitsPerduts == 0 && partitsEmpatats == 0)
             {
-                Console.WriteLine("El fitxer és buit");
+                Console.WriteLine("El fitxer és buit.");
             }
             else
             {
-                Console.WriteLine($"Total de punts: {totalPunts}");
+                Console.WriteLine($"Total de punts: {totalPunts}\nPartits guanyats: {partitsGuanyats}\nPartits empatats: {partitsEmpatats}\nPartits perduts: {partitsPerduts}");
             }
-        
+    
         }
     }
 }

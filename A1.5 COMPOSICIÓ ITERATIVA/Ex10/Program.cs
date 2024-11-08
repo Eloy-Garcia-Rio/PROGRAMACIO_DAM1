@@ -22,18 +22,15 @@
             {
                 contador1++;
                 contadorTirades++;
-                tirada = rnd.Next(1, 7);
             }
             else if (tirada == 6)
             {
                 contador6++;
                 contadorTirades++;
-                tirada = rnd.Next(1, 7);
             }
             else
             {
                 contadorTirades++;
-                tirada = rnd.Next(1, 7);
             }
 
             while (contador1 != contador6)
@@ -43,20 +40,18 @@
                 {
                     contador1++;
                     contadorTirades++;
-                    tirada = rnd.Next(1, 7);
                 }
                 else if (tirada == 6)
                 {
                     contador6++;
                     contadorTirades++;
-                    tirada = rnd.Next(1, 7);
                 }
                 else
                 {
                     contadorTirades++;
-                    tirada = rnd.Next(1, 7);
                 }
-                
+
+                tirada = rnd.Next(1, 7);
             }
             Console.WriteLine($"Rolls: {contadorTirades}\nCrits: {contador6}");
         }

@@ -1,4 +1,6 @@
-﻿namespace Ex16
+﻿using System.Globalization;
+
+namespace Ex16
 {
     internal class Program
     {
@@ -13,6 +15,8 @@
             double valorX, valorY, radi, resultat;
             string liniaX, liniaY;
             StreamReader sr;
+
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
             resultat = 0;
             valorX = 0;
@@ -34,21 +38,18 @@
                 if (resultat < radi)
                 {
                     Console.WriteLine($"El punt ({valorX},{valorY}) es troba dins de la circumferència.");
-                    liniaX = sr.ReadLine();
-                    liniaY = sr.ReadLine();
                 }
                 else if (resultat == radi)
                 {
                     Console.WriteLine($"El punt ({valorX},{valorY}) es troba sobre el perímetre de la circumferència.");
-                    liniaX = sr.ReadLine();
-                    liniaY = sr.ReadLine();
                 }
                 else
                 {
                     Console.WriteLine($"El punt ({valorX},{valorY}) es troba fora de la circumferència.");
-                    liniaX = sr.ReadLine();
-                    liniaY = sr.ReadLine();
                 }
+
+                liniaX = sr.ReadLine();
+                liniaY = sr.ReadLine();
             }
 
             sr.Close();

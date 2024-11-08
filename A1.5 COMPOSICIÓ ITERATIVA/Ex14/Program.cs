@@ -31,12 +31,9 @@
                     contadorBonus++;
                     premi = Convert.ToInt32(sr.ReadLine());
                     totalPremi = totalPremi + premi;
-                    linia = sr.ReadLine();
                 }
-                else
-                {
-                    linia = sr.ReadLine();
-                }
+
+                linia = sr.ReadLine();
             }
 
             sr.Close();

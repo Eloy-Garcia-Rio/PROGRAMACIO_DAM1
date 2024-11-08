@@ -30,25 +30,32 @@
 
             while (linia != null)
             {
-                if (linia == "NO BONUS")
-                {
-                    contadorNoBonus++;
-                    linia = sr.ReadLine();
-                }
-                else if (linia == "BONUS")
+                if (linia == "BONUS")
                 {
                     contadorBonus++;
                     int premi = rnd.Next(1, 11);
                     totalPremis = totalPremis + premi;
-                    linia = sr.ReadLine();
                 }
+                else
+                {
+                    contadorNoBonus++;
+                }
+
+                linia = sr.ReadLine();
             }
             sr.Close();
 
-            totalBillets = contadorBonus + contadorNoBonus;
-            percentGuanyador = 1.00 * contadorBonus / totalBillets * 100;
+            if (totalBillets == 0)
+            {
+                Console.WriteLine("El fitxer és buit.");
+            }
+            else
+            {
+                totalBillets = contadorBonus + contadorNoBonus;
+                percentGuanyador = 1.00 * contadorBonus / totalBillets * 100;
 
-            Console.WriteLine($"Total de billets: {totalBillets}\nBillets guanyadors: {contadorBonus}\nPercentatge guanyadors: {percentGuanyador:0.00}%\nTotal premis: {totalPremis:0.00}€");
+                Console.WriteLine($"Total de billets: {totalBillets}\nBillets guanyadors: {contadorBonus}\nPercentatge guanyadors: {percentGuanyador:0.00}%\nTotal premis: {totalPremis:0.00}€");
+            }
         }
     }
 }
