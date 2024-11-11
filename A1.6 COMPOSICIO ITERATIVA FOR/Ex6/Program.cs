@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que demana a l'usuari que entri 10 valors enters diferents i els classifica segons si són positius o negatius.
+        /// Al final de l'itinerari retorna la quantitat de valors positius i de valors negatius.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num, nPos, nNeg;
@@ -23,6 +28,7 @@
                     nNeg++;
                 }
             }
+
             Console.WriteLine($"Números positius: {nPos}\nNúmeros negatius: {nNeg}");
         }
     }

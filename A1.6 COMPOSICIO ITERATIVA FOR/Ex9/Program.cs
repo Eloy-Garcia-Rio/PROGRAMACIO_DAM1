@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que mostra la taula de multiplicacions d'un número enter entrat per l'usuari.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num;

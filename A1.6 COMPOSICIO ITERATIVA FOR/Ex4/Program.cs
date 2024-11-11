@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que retorna tots els números enters trobats entre dos valors entrats per l'usuari, ambdòs inclosos.
+        /// En cas que un dels valors sigui múltiple de 7, no el retornarà.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num1, num2;

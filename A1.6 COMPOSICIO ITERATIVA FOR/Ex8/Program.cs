@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que calcula el factorial d'un valor entrat per l'usuari.
+        /// Al final de l'itinerari retorna el resultat del factorial.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num, resultat;
@@ -19,6 +24,7 @@
                 resultat = resultat * factorial;
             }
 
+            Console.WriteLine($"Resultat final: {resultat}");
         }
     }
 }
