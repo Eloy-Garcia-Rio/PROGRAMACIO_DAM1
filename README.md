@@ -1,2 +1,2 @@
-# A1.5.-COMPOSICIO-ITERATIVA
-Repositori per a l'activitat 1.5 de la NF1 de Programació
+# PROGRAMACIO_DAM1
+Repositori personal per a les activitats del mòdul de programació.
