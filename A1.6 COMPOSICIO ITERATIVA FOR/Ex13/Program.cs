@@ -10,7 +10,6 @@
         static void Main(string[] args)
         {
             int totalJornades, golsGir, golsRival, totalPunts, counterW, counterD, counterL;
-            string linia;
             StreamReader sr;
 
             golsGir = 0;
@@ -21,13 +20,11 @@
             counterL = 0;
 
             sr = new StreamReader("Girona lliga23_24_v2.txt");
-            linia = sr.ReadLine();
-            totalJornades = Convert.ToInt32(linia);
-            linia = sr.ReadLine();
+            totalJornades = Convert.ToInt32(sr.ReadLine());
 
-            for (string i = linia; i != null; i = sr.ReadLine())
+            for (int i = 1; i <= totalJornades; i++)
             {
-                golsGir = Convert.ToInt32(i);
+                golsGir = Convert.ToInt32(sr.ReadLine());
                 golsRival = Convert.ToInt32(sr.ReadLine());
 
                 if (golsGir > golsRival)

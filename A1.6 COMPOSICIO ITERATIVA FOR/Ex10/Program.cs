@@ -9,14 +9,15 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            for (int i = 4; i <= 300; i = i + 4)
+            for (int i = 0; i <= 300; i += 4)
             {
                 int counter = i / 4;
                 Console.WriteLine(i);
 
-                if (counter % 20 == 0)
+                if (counter % 20 == 0 && counter != 0)
                 {
                     Console.ReadKey();
+                    Console.Clear();
                 }
             }
         }

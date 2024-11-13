@@ -19,10 +19,10 @@
                     Console.Write(j);
 
                     if (j < i)
-                        Console.Write("+");
+                        Console.Write(" + ");
                 }
 
-                Console.WriteLine("=" + counter);
+                Console.WriteLine($" = {counter}");
             }
         }
     }

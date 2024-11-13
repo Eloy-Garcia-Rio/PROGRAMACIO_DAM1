@@ -10,9 +10,9 @@
             num = Convert.ToInt32(Console.ReadLine());
             increment = 0;
 
-            for (int p = 1; p <= num; p++)
+            for (int i = 1; i <= num; i++)
             {
-                for (int i = 0; i <= increment; i++)
+                for (int j = 0; j <= increment; j++)
                 {
                     Console.Write('*');
                 }

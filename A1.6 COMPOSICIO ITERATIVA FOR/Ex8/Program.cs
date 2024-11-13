@@ -16,10 +16,10 @@
 
             resultat = num;
 
-            for (int mult = 1; mult < num; mult++)
+            for (int i = 1; i < num; i++)
             {
                 int factorial;
-                factorial = num - mult;
+                factorial = num - i;
                 Console.WriteLine($"{resultat} * {factorial} = {resultat * factorial}");
                 resultat = resultat * factorial;
             }
