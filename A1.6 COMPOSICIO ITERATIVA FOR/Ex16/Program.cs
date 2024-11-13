@@ -14,7 +14,7 @@
             {
                 for (int i = 0; i <= increment; i++)
                 {
-                    Console.Write("*");
+                    Console.Write('*');
                 }
                 increment ++;
                 Console.WriteLine();

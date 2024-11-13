@@ -33,6 +33,7 @@
                 counterBillets++;
             }
 
+            sr.Close();
             Console.WriteLine($"Total billets: {counterBillets}\nTotal premis: {counterPremis}\nImport total premis: {totalPremis:0.00}€");
         }
     }

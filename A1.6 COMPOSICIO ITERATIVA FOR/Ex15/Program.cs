@@ -5,11 +5,9 @@
         static void Main(string[] args)
         {
             int num;
-            char asciiArt;
 
             Console.WriteLine("Entra un número.");
             num = Convert.ToInt32(Console.ReadLine());
-            asciiArt = '*';
 
             for (int i = 0; i < num * num; i++)
             {
@@ -19,7 +17,7 @@
                     Console.WriteLine(" ");
                 }
 
-                Console.Write(asciiArt);
+                Console.Write('*');
             }
         }
     }

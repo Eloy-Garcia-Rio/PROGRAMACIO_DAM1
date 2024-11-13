@@ -46,6 +46,7 @@
                 }
             }
 
+            sr.Close();
             Console.WriteLine($"Partits jugats: {totalJornades}\nTotal punts: {totalPunts}\nPartits guanyats: {counterW}\nPartits empatats: {counterD}\nPartits perduts: {counterL}");
         }
     }

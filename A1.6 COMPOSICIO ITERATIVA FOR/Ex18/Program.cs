@@ -4,20 +4,23 @@
     {
         static void Main(string[] args)
         {
-            int kCond = 4;
-            int inc = 0;
-            for (int p = 0; p <= 4; p++)
+            int num;
+
+            Console.WriteLine("Entra un número.");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= num; i++)
             {
-                for (int k = 0; k <= kCond; k++)
+                for (int j = 1; j < num - i + 1; j++)
                 {
                     Console.Write(" ");
                 }
-                kCond--;
-                for (int i = 0; i <= inc; i++)
+                for (int k = 1; k <= i; k++)
                 {
-                    Console.Write(i+1);
+                    Console.Write(k);
+                    Console.Write(" ");
                 }
-                inc += 2;
+                Console.WriteLine();
                 Console.WriteLine();
             }
         }
