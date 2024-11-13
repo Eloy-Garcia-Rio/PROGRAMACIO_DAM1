@@ -33,7 +33,7 @@
                 contadorTirades++;
             }
 
-            while (contador1 != contador6)
+            while (contador1 != contador6 || contador1 == 0)
             {
 
                 if (tirada == 1)

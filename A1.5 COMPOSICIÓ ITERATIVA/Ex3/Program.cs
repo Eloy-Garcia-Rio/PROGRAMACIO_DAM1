@@ -20,14 +20,14 @@
             {
                 if (num > 0)
                 {
-                    contadorPos = contadorPos + 1;
-                    num = Convert.ToInt32(Console.ReadLine());
+                    contadorPos++;
                 }
                 else
                 {
-                    contadorNeg = contadorNeg + 1;
-                    num = Convert.ToInt32(Console.ReadLine());
+                    contadorNeg++;
                 }
+
+                num = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine($"TOTAL POSITIUS: {contadorPos}\nTOTAL NEGATIUS: {contadorNeg}");
         }
