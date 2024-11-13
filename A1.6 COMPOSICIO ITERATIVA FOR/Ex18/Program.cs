@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que genera una piràmide amb números d'alçada indicada per l'usuari.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num;

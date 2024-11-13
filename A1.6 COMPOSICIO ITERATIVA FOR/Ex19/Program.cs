@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que genera una seqüència de sumatoris que finalitza amb el número indicat per l'usuari.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num, counter;
