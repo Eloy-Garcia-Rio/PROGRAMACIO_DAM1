@@ -27,17 +27,17 @@ namespace Ex14
             sr = new StreamReader("tiquetsuper.txt");
             linia = sr.ReadLine();
             nProductes = Convert.ToInt32(linia);
-            linia = sr.ReadLine();
 
-            for (string i = linia; i != null; i = sr.ReadLine())
+            for (int i = 1; i <= nProductes; i++)
             {
-                nomProducte = i;
+                nomProducte = sr.ReadLine();
                 qProducte = Convert.ToInt32(sr.ReadLine());
                 preuProducte = Convert.ToDouble(sr.ReadLine());
                 preuArticle = preuProducte * qProducte;
                 preuTotal = preuTotal + preuArticle;
             }
 
+            sr.Close();
             Console.WriteLine($"Productes comprats: {nProductes}\nImport total: {preuTotal:0.00}€");
         }
     }

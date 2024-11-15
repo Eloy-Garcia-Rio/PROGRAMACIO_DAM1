@@ -13,15 +13,15 @@
             Console.WriteLine("Entra un número.");
             num = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < num * num; i++)
+            for (int i = 0; i < num; i++)
             {
                 
-                if (i % num == 0 && i != 0)
+                for (int j = 1; j <= num; j++)
                 {
-                    Console.WriteLine(" ");
+                    Console.Write('*');
                 }
 
-                Console.Write('*');
+                Console.WriteLine("");
             }
         }
     }
