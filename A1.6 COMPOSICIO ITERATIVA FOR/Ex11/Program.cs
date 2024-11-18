@@ -9,7 +9,7 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            int premi, totalPremis, counterBillets, counterPremis;
+            int premi, totalPremis, counterBillets, counterPremis, totalBillets;
             string linia;
             StreamReader sr;
 
@@ -21,15 +21,19 @@
             totalPremis = 0;
             sr = new StreamReader("BONUS3.TXT");
             linia = sr.ReadLine();
+            totalBillets = Convert.ToInt32(linia);
 
-            for (string i = linia; i != null; i = sr.ReadLine())
+            for (int i = 1; i <= totalBillets; i++)
             {
-                if (i == "BONUS")
+                linia = sr.ReadLine();
+
+                if (linia == "BONUS")
                 {
                     counterPremis++;
                     premi = Convert.ToInt32(sr.ReadLine());
                     totalPremis = totalPremis + premi;
                 }
+
                 counterBillets++;
             }
 
