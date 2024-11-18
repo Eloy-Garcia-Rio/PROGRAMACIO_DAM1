@@ -25,6 +25,7 @@
                     Console.Write(k);
                     Console.Write(" ");
                 }
+
                 Console.WriteLine();
                 Console.WriteLine();
             }
