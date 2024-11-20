@@ -10,24 +10,25 @@
         {
             const string FILE_NAME = "NUMEROS2.TXT";
 
-            int num, lastNum;
+            int num;
             string linia;
             bool esParell;
             StreamReader sr;
 
-            lastNum = 0;
+            esParell = false;
             sr = new StreamReader(FILE_NAME);
             linia = sr.ReadLine();
             num = Convert.ToInt32(linia);
 
-            while (1.00 * num % 2 != 0.00 && linia != null)
+            while (!esParell && linia != null)
             {
-                lastNum = num;
+                esParell = 1.00 * num % 2 == 0.00;
+
                 linia = sr.ReadLine();
                 num = Convert.ToInt32(linia);
             }
 
-            esParell = 1.00 * lastNum % 2 == 0.00;
+            sr.Close();
 
             if (esParell)
                 Console.WriteLine("Hi ha valors parells.");

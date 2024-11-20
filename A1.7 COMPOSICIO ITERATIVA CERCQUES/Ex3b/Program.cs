@@ -11,15 +11,16 @@
             int num;
             bool esParell;
 
+            esParell = false;
             Console.WriteLine("Entra un número.");
             num = Convert.ToInt32(Console.ReadLine());
 
-            while (1.00 * num % 2 != 0.00 && num != -9999)
+            while (!esParell && num != -9999)
             {
+                esParell = 1.00 * num % 2 == 0.00;
+
                 num = Convert.ToInt32(Console.ReadLine());
             }
-
-            esParell = 1.00 * num % 2 == 0.00;
 
             if (esParell)
                 Console.WriteLine("Hi ha valors parells.");

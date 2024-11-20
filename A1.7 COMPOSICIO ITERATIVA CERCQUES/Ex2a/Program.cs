@@ -15,23 +15,24 @@
             bool esRepeteix;
             StreamReader sr;
 
+            esRepeteix = false;
             sr = new StreamReader(FILE_NAME);
             primerNum = Convert.ToInt32(sr.ReadLine());
             linia = sr.ReadLine();
             numLinia = Convert.ToInt32(linia);
 
-            while (numLinia != primerNum && linia != null)
+            while (!esRepeteix && linia != null)
             {
+                esRepeteix = numLinia == primerNum;
+
                 linia = sr.ReadLine();
                 numLinia = Convert.ToInt32(linia);
             }
 
             sr.Close();
-            esRepeteix = numLinia == primerNum;
 
             if (esRepeteix)
                 Console.WriteLine("El primer número es repeteix.");
-
             else
                 Console.WriteLine("El primer número no es repeteix.");
         }
