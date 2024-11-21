@@ -12,8 +12,6 @@
 
             Console.WriteLine("Entra un número.");
             num = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Entra un caràcter");
-
 
             for (int i = 0; i < num; i++)
             {
