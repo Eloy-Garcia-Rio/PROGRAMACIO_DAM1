@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que cerca 5 línies seguides amb un valor superior a 500 dins d'un fitxer.
+        /// Al final de la cerca retorna el resultat.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             const string FILE_1 = "PLAGA.TXT";

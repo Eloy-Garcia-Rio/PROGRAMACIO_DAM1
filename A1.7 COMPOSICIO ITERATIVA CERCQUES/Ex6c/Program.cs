@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que retorna si els valors d'un fitxer són números primers o no.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             const string FILE = "ALGUNSPRIMERS.TXT";
@@ -30,6 +34,11 @@
             }
         }
 
+        /// <summary>
+        /// Funció que comprova si el número passat és primer.
+        /// </summary>
+        /// <param name="n">Número passat.</param>
+        /// <returns>Booleana indicant si és primer.</returns>
         public static bool EsPrimer(int n)
         {
             int sum, inc;

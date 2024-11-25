@@ -2,6 +2,13 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que cerca productes que continguin certes paraules dins d'un fitxer.
+        /// Al final de la cerca, si s'ha trobat més d'una coincidència, retorna una línia de rebuig.
+        /// Si s'ha trobat una sola coincidència, retorna l'import de la compra i el valor coincident.
+        /// Si no es troba cap coincidència, es retorna l'import i un missatge indicant les 0 coincidències.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             const string FILE_1 = "TIQUET.TXT";

@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que comprova i retorna si un número entrat és perfecte.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num, sumatori, increment;

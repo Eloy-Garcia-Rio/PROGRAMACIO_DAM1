@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que retorna si un número entrat és primer.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             int num, sumatori, increment;

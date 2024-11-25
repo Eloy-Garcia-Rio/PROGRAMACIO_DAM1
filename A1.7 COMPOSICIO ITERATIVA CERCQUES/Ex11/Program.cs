@@ -2,6 +2,12 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que cerca un valor 0 dins d'un fitxer.
+        /// A l'acabar la cerca, comprova si el total de valors no arriben a 10.
+        /// Finalment, retorna el resultat.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             const string FILE_1 = "NOPERILL.TXT";

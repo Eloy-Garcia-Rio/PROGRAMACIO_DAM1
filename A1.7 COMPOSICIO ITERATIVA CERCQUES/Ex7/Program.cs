@@ -2,6 +2,11 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Programa que cerca un número dins d'un fitxer.
+        /// Al final de la cerca, retorna si ha estat trobat o no i, en cas de ser trobat, en quina línia.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             const string FILE_1 = "PERDUT.TXT";
@@ -34,6 +39,7 @@
 
                 linia = sr.ReadLine();
             }
+            sr.Close();
 
             if (esTrobat)
                 Console.WriteLine($"El dorsal 231 ha arribat en posició {posicio}");
