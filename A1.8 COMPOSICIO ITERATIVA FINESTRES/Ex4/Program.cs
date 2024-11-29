@@ -8,8 +8,8 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            const string FILE_1 = "NUMEROS1.TXT";
-            const string FILE_2 = "NUMEROS2.TXT";
+            const string FILE_1 = "MINIM_LOCAL1.TXT";
+            const string FILE_2 = "MINIM_LOCAL2.TXT";
 
             int a, b, c, nValls;
             bool esVall;

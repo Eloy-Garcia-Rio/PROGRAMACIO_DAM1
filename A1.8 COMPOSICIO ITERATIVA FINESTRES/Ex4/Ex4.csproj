@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="MINIM_LOCAL1.TXT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="MINIM_LOCAL2.TXT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="NUMEROS1.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
