@@ -113,10 +113,10 @@ namespace MenuPremier
             }
             sr.Close();
 
-            if (isTeam)
+            if (!isTeam)
+                teamName = null;
+
                 return teamName;
-            else
-                return null;
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace MenuPremier
         /// <returns>missatge que conté el total de gols marcats per l'equip indicat</returns>
         public static string GetTeamGoals(string fileMatches, string abreviatura)
         {
-            string line, matchDate, homeTeam, awayTeam;
+            string line, matchDate, homeTeam, awayTeam, message;
             int homeGoals, awayGoals, teamGoals;
             bool isHomeTeam, isAwayTeam;
             StreamReader sr;
@@ -188,7 +188,9 @@ namespace MenuPremier
             }
             sr.Close();
 
-            return $"({abreviatura}) scored {teamGoals} goals this season.";
+            message = $"({abreviatura}) scored {teamGoals} goals this season.";
+
+            return message;
         }
 
         public static void ShowMenu()
