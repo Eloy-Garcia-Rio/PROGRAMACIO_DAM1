@@ -52,7 +52,7 @@ namespace MenuPremier
         }
 
         /// <summary>
-        /// 
+        /// Retorna el missatge passat des de la crida i posa el sistema en espera d'un input.
         /// </summary>
         /// <param name="msg"></param>
         public static void MsgNextScreen(string msg)
@@ -128,20 +128,13 @@ namespace MenuPremier
         /// <param name="fileMatches">fitxer que conté els partits</param>
         public static void DoGetGoalsTeam(string fileTeams, string fileMatches)
         {
-            string line, matchDate, homeTeam,  awayTeam, teamShort, teamSearch;
-            int homeGoals, awayGoals, teamGoals;
-            bool isHomeTeam, isAwayTeam;
-            StreamReader sr;
+            string line, teamShort, teamSearch;
 
             Console.WriteLine();
             Console.WriteLine("Enter the shorthand name of a team.");
             teamShort = Console.ReadLine();
 
             teamSearch = GetTeamName(fileTeams, teamShort);
-
-            sr = new StreamReader(fileMatches);
-            line = sr.ReadLine();
-            teamGoals = 0;
 
             if (teamSearch == null)
                 Console.WriteLine("The selected team does not exist.");
@@ -160,13 +153,13 @@ namespace MenuPremier
         public static string GetTeamGoals(string fileMatches, string abreviatura)
         {
             string line, matchDate, homeTeam, awayTeam, message;
-            int homeGoals, awayGoals, teamGoals;
+            int homeGoals, awayGoals, totalGoals;
             bool isHomeTeam, isAwayTeam;
             StreamReader sr;
 
             sr = new StreamReader(fileMatches);
             line = sr.ReadLine();
-            teamGoals = 0;
+            totalGoals = 0;
 
             while (line != null)
             {
@@ -180,15 +173,15 @@ namespace MenuPremier
                 isAwayTeam = abreviatura == awayTeam;
 
                 if (isHomeTeam)
-                    teamGoals = teamGoals + homeGoals;
-                if (isAwayTeam)
-                    teamGoals = teamGoals + awayGoals;
+                    totalGoals = totalGoals + homeGoals;
+                else if (isAwayTeam)
+                    totalGoals = totalGoals + awayGoals;
 
                 line = sr.ReadLine();
             }
             sr.Close();
 
-            message = $"({abreviatura}) scored {teamGoals} goals this season.";
+            message = $"({abreviatura}) scored {totalGoals} goals this season.";
 
             return message;
         }
